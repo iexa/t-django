@@ -1,6 +1,6 @@
 bson==0.5.8
 dataclasses==0.6
-Django==2.2.9
+Django==2.2.10
 django-crispy-forms==1.8.1
 django-debug-panel==0.8.3
 django-debug-toolbar==2.2
