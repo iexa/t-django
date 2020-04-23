@@ -1,3 +1,15 @@
 .venv
 __pycache__
+*.log
+*.pot
+*.py[cod]
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+static/
+
+
+# dotenv
+.env*
 
