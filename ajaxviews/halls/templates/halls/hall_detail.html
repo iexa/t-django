@@ -1,0 +1,8 @@
+{% extends "halls/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="title">{{ hall.title }}</h1>
+    <p class="subtitle">by: {{ hall.user.username }}</p>
+</div>
+{% endblock %}

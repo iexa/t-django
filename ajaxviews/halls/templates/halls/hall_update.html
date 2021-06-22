@@ -1,0 +1,38 @@
+{% extends "halls/base.html" %}
+
+{% block content %}
+
+<h2 class="title">
+{% if edit %}Update{% else %}Create{% endif %} Hall
+</h2>
+    <form method="post" action="" id="main_form">
+        {% csrf_token %}
+        {% include 'bulma_widget/_form_errors.djhtml' %}
+        {% include 'bulma_widget/form.djhtml' %}
+        
+        <button class="button" type="submit">
+        {% if edit %}Update{% else %}Create{% endif %}
+        </button>
+        {% if edit %}
+            <a id="delete_button" href="{% url 'delete_hall' hall.id %}" style="margin-left: 3rem" class="button is-danger">Delete hall</a>
+        {% endif %}
+    </form>
+    <script>
+        const d = document.querySelector('#delete_button')
+        d.addEventListener('click', async (e) => { e.preventDefault(); if(confirm('Sure to remove?')) {
+            const url = document.querySelector('#delete_button').href
+            const resp = await fetch(url, {
+                method: 'POST',
+                headers: {},
+                body: new FormData(document.querySelector('#main_form'))
+            })
+            // did it!
+            if(resp.ok)
+                document.location = resp.url
+            else
+                alert('error', resp.status)
+        }
+    })
+    </script>
+
+{% endblock %}

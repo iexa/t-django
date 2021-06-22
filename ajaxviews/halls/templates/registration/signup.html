@@ -1,0 +1,14 @@
+{% extends "halls/base.html" %}
+
+{% block content %}
+
+    <h2 class="title">Sign Up</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        {% include 'bulma_widget/_form_errors.djhtml' %}
+        {% include 'bulma_widget/form.djhtml' %}
+
+        <button class="button is-primary" type="submit">Signup</button>
+    </form>
+
+{% endblock %}
