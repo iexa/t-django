@@ -1,0 +1,27 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "CsabaK", email = "898182+iexa@users.noreply.github.com"},
+]
+dependencies = [
+    "django~=3.2.10",
+    "django-allauth>=0.56.1",
+    "django-crispy-forms>=2.0",
+    "dj-database-url>=2.1.0",
+    "python-dotenv>=1.0.0",
+    "django-extensions>=3.2.3",
+    "django-grappelli~=2.1",
+    "django-filebrowser~=3.1",
+    "django-vanilla-views>=3.0.0",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "django-watchfiles>=0.0.1",
+    "django-debug-toolbar>=4.2.0",
+]
