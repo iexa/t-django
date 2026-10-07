@@ -1,0 +1,19 @@
+[project]
+name = "ruffmatez"
+version = "0.1.0"
+description = "django in action"
+readme = "README.md"
+authors = [
+    { name = "CsabaK", email = "898182+iexa@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.2,<6",
+]
+
+
+[dependency-groups]
+dev = [
+    "django-debug-toolbar>=8.0.0",
+    "django-watchfiles>=1.4.0",
+]
